@@ -130,6 +130,111 @@ job-portal-system
 
 ---
 
+## Installation Guide
+
+### Step 1: Clone repository
+
+
+git clone https://github.com/yourusername/job-portal-system.git
+
+
+---
+
+### Step 2: Setup Backend
+
+Go to backend folder:
+
+
+cd backend
+
+
+Run Spring Boot:
+
+
+./mvnw spring-boot:run
+
+
+Backend runs on:
+
+
+http://localhost:8080
+
+
+---
+
+### Step 3: Setup Frontend
+
+Go to frontend folder:
+
+
+cd frontend
+
+
+Install dependencies:
+
+
+npm install
+
+
+Run frontend:
+
+
+npm run dev
+
+
+Frontend runs on:
+
+
+http://localhost:5173
+
+
+---
+
+### Step 4: Setup MySQL Database
+
+Create database:
+
+
+CREATE DATABASE jobportal;
+
+
+Update backend application.properties:
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/jobportal
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+
+spring.jpa.hibernate.ddl-auto=update
+
+
+---
+
+## API Endpoints
+
+### Authentication APIs
+
+
+POST /api/auth/register
+POST /api/auth/login
+
+
+### Job APIs
+
+
+GET /api/jobs
+POST /api/jobs
+
+
+### Application APIs
+
+
+POST /api/applications
+GET /api/applications
+
+
+---
+
 ## Security Implementation
 
 - JWT Authentication
